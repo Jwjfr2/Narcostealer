@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narcostealer - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="snow-container"></div>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-image">
+                    <img id="logoImage" src="images/logo.png" alt="Logo">
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Overview</span>
+                </li>
+                <li>
+                    <i class="fas fa-virus"></i>
+                    <span>Malware</span>
+                </li>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Builds</span>
+                </li>
+                <li>
+                    <i class="fas fa-network-wired"></i>
+                    <span>Bots</span>
+                </li>
+                <li>
+                    <i class="fas fa-database"></i>
+                    <span>Logs</span>
+                </li>
+                <li>
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header>
+                <h1>Dashboard Overview</h1>
+                <div class="header-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-plus"></i> New Build
+                    </button>
+                </div>
+            </header>
+
+            <div id="welcomeMessage"></div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Active Bots</h3>
+                        <p class="stat-value">1,337</p>
+                        <span class="stat-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Credentials</h3>
+                        <p class="stat-value">85.4K</p>
+                        <span class="stat-change positive">+8.2%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Cookies</h3>
+                        <p class="stat-value">142K</p>
+                        <span class="stat-change positive">+15.7%</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Wallets</h3>
+                        <p class="stat-value">2.1K</p>
+                        <span class="stat-change positive">+5.3%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card wide">
+                    <h3>Infection Rate</h3>
+                    <div class="chart-placeholder">
+                        <div class="line-chart"></div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Top Countries</h3>
+                    <div class="chart-placeholder">
+                        <div class="pie-chart"></div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Bot Status</h3>
+                    <div class="chart-placeholder">
+                        <div class="donut-chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-logs">
+                <h3>Recent Activity</h3>
+                <div class="log-table">
+                    <div class="log-entry">
+                        <span class="log-time">17:25:33</span>
+                        <span class="log-type success">New Bot</span>
+                        <span class="log-message">Bot #1337 connected from United States</span>
+                    </div>
+                    <div class="log-entry">
+                        <span class="log-time">17:24:15</span>
+                        <span class="log-type info">Data</span>
+                        <span class="log-message">Retrieved 156 cookies from Bot #1336</span>
+                    </div>
+                    <div class="log-entry">
+                        <span class="log-time">17:23:47</span>
+                        <span class="log-type warning">Alert</span>
+                        <span class="log-message">Bot #1245 detected antivirus activity</span>
+                    </div>
+                    <div class="log-entry">
+                        <span class="log-time">17:22:30</span>
+                        <span class="log-type error">Error</span>
+                        <span class="log-message">Connection lost with Bot #1242</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
